@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лічильник людей в приміщенні</title>
+    <style>
+        #counter {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 36px;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Кількість людей у приміщенні:</h1>
+    <div id="counter">0</div>
+    <button onclick="increment()">Ввійти (+)</button>
+    <button onclick="decrement()">Вийти (-)</button>
+
+    <script>
+        let count = 0;
+        
+        function updateCounter() {
+            document.getElementById("counter").textContent = count;
+        }
+
+        function increment() {
+            count++;
+            updateCounter();
+        }
+
+        function decrement() {
+            if (count > 0) {
+                count--;
+            }
+            updateCounter();
+        }
+    </script>
+</body>
+</html>
